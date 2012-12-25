@@ -25,18 +25,22 @@ public class Corpus {
 	
 	public void add(String name, ArrayList<String> tokens){
 		if(!frozen){
-			ArrayList<Integer> w = new ArrayList<Integer>();
+			int[] w = new int[tokens.size()];
+			int idx=0;
 			for(String s: tokens){
-				
 				vocab.add(s);
-				w.add(vocab.get(s));
+				w[idx]=vocab.get(s).intValue();
+				idx++;
 			}
 			docs.add(new Document(this, name,w));	
 		}	
 	}
 	
 	public void freeze(){
+		int count = 0;
 		for (Document doc: docs){
+			System.out.println(count);
+			count++;
 			doc.freeze();
 		}
 		frozen=true;

@@ -6,23 +6,23 @@ import java.util.Arrays;
 
 public class Utils {
 	
-	public static ArrayList<Integer> binCount(ArrayList<Integer> intlist){
-		
-		Integer max = Collections.max(intlist);
-		int[] bincount = new int[max.intValue()+1];
-		
-		for(Integer i: intlist){
-			bincount[i.intValue()]++;
+	public static int[] binCount(int[] intlist){
+		int max = 0;
+		for(int i: intlist){
+			if(i>max){
+				max=i;
+			}
 		}
-		ArrayList<Integer> bincountList = new ArrayList<Integer>(bincount.length);
+		int[] bincount = new int[max+1];
 		
-		for(int j = 0; j<bincount.length; j++){
-			bincountList.add(new Integer(bincount[j]));
+		for(int i: intlist){
+			bincount[i]++;
 		}
-		
-		return bincountList;
+
+		return bincount;
 	}
-	
 }
+	
+
 
 
