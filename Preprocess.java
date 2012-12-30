@@ -1,6 +1,4 @@
-package corpus;
-import corpus.Corpus;
-import corpus.Document;
+
 import java.io.*;
 import java.util.Arrays;
 import java.util.HashSet;

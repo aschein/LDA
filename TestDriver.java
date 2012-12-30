@@ -1,5 +1,5 @@
-package corpus;
-import corpus.*;
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 

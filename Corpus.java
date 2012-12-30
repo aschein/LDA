@@ -1,7 +1,6 @@
-package corpus;
+
 import java.util.ArrayList;
 import java.io.*;
-import corpus.Document;
 
 public class Corpus {
 	
@@ -22,6 +21,8 @@ public class Corpus {
 		this.vocab = vocab;
 		this.frozen = frozen;
 	}
+
+	public Vocabulary getVocab(){return vocab;}
 	
 	public void add(String name, ArrayList<String> tokens){
 		if(!frozen){

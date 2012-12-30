@@ -1,4 +1,4 @@
-package corpus;
+
 
 public class Document{
 	Corpus corpus;
@@ -11,7 +11,7 @@ public class Document{
 		this.name = name;
 		this.w = w;
 	}
-	
+	public int[] getW(){return w;}
 	public int size(){return w.length;}
 	public void freeze(){
 		Nv = Utils.binCount(w);

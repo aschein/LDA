@@ -1,4 +1,4 @@
-package corpus;
+
 import java.util.HashMap;
 
 public class Vocabulary {
