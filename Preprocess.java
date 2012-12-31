@@ -122,7 +122,7 @@ public class Preprocess {
 				ArrayList<String> text = tokenize(corpusEntry[corpusEntry.length-1], stopwordSet);
 				c.add(name, text);
 			}
-			c.freeze();
+			//c.freeze();
 		}catch(IOException e){e.printStackTrace();}
 		return c;
 	}

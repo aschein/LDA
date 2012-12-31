@@ -72,15 +72,23 @@ public class Utils {
 	public static int searchsorted(double[] dist, double r){
 		int idx=0;
 		//TODO This is an O(n) implementation of searchsorted.
-		while(dist[idx]<=r){
+		while((idx<dist.length-1)&&(dist[idx]<=r)){
 			idx++;
 		}
 		return idx;
 	}
 	
-	public static double array_sum(double[] vector){
+	public static double[] array_log(double[] array){
+		double[] log_array = new double[array.length];
+		for(int i = 0; i<array.length; i++){
+			log_array[i]=Math.log(array[i]);
+		}
+		return log_array;
+	}
+	
+	public static double array_sum(double[] array){
 		double sum = 0;
-		for(double d:vector){
+		for(double d:array){
 			sum+=d;
 		}
 		return sum;
@@ -106,6 +114,14 @@ public class Utils {
 		
 	}
 	
+	public static void array_toString(double[] array){
+		String s="";
+		for(int i=0; i<array.length;i++){
+			System.out.print(" ");
+			System.out.print(array[i]);
+		}
+	}
+	
 	public static double[] collapse(double[][] matrix, int axis){
 		double[] collapsed;
 		if(axis==0){
@@ -122,13 +138,10 @@ public class Utils {
 	}
 	
 	public static void main(String[] args) {
-		//double[] dist = {0.5, 4.5, 10, 0, 1.1, 35};
-		//int[] samples = sample(dist, 10);
-		//for(int i: samples){
-		//	System.out.println(i);
-		//}
-		int[][] matrix = new int[5][4];
-		System.out.println(matrix[0].length);
+		double[] dist = {0.5, 4.5, 10, 0, 1.1, 35};
+		int sample = sample(dist, 1)[0];
+		System.out.println(sample);
+
 
 	}
 
